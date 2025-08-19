@@ -1,0 +1,50 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  /* O texto terá um fundo de gradiente */
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9c27b0, #2196f3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* A cor do texto fica transparente para revelar o gradiente */
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Animação de brilho para o texto */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff8a00, 0 0 30px #e52e71,
+      0 0 40px #9c27b0;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2196f3, 0 0 40px #9c27b0,
+      0 0 50px #e52e71;
+  }
+}
+
+/* Design responsivo para telas menores */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+/* Design responsivo para telas maiores */

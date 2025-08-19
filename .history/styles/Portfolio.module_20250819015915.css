@@ -4,48 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 6rem 2rem 2rem 2rem; /* Adiciona espaço no topo para o header */
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(12, 26, 35, 0.8);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(247, 208, 96, 0.2);
-}
-
-.navbar {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.navLink {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-family: "EB Garamond", serif;
-  font-size: 1.1rem;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.navLink:hover {
-  color: #f7d060;
-  text-shadow: 0 0 5px #f7d060;
-}
-
-.mainContent {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem; /* Espaço entre as seções */
-  width: 100%;
-  max-width: 900px;
+  padding: 2rem;
 }
 
 /* O 'pergaminho' ou card principal */
@@ -53,6 +12,7 @@
   background: rgba(12, 26, 35, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 15px;
+  padding: 2rem 3rem;
   max-width: 900px;
   width: 100%;
   display: grid;
@@ -64,7 +24,6 @@
   border-image-slice: 1;
   border-image-source: linear-gradient(to right bottom, #f7d060, #a57c00);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  padding: 2rem 3rem;
 
   /* Animação de entrada */
   opacity: 0;
@@ -124,7 +83,7 @@
 }
 
 .backLink {
-  margin-top: 2rem;
+  margin-top: 4rem;
   color: #f7d060;
   text-decoration: none;
   opacity: 0.7;
@@ -133,6 +92,18 @@
 
 .backLink:hover {
   opacity: 1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .scrollCard {
+    grid-template-columns: 1fr; /* Coluna única */
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
 }
 
 /* Keyframes para a animação do card */
@@ -148,6 +119,7 @@
 }
 
 .skillsSection {
+  margin-top: 4rem;
   width: 100%;
   max-width: 900px;
   text-align: center;
@@ -200,123 +172,12 @@
   line-height: 1.5;
 }
 
-/* Seção de Contato */
-.contactSection {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-  animation: fadeInCard 0.8s 0.8s ease-out forwards;
-  opacity: 0;
-  background: rgba(12, 26, 35, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 2rem 3rem;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right bottom, #8a6c29, #5c481a);
-}
-
-.contactTitle {
-  font-family: "Cinzel", serif;
-  font-size: 2.2rem;
-  color: #f7d060;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 5px #f7d060;
-}
-
-.contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  text-align: left;
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-}
-
-.formLabel {
-  font-family: "EB Garamond", serif;
-  margin-bottom: 0.5rem;
-  color: #c0c0c0;
-}
-
-.formInput,
-.formTextarea {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid #5c481a;
-  border-radius: 5px;
-  padding: 10px;
-  color: #e0e0e0;
-  font-family: "EB Garamond", serif;
-  font-size: 1.1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.formInput:focus,
-.formTextarea:focus {
-  outline: none;
-  border-color: #f7d060;
-  box-shadow: 0 0 10px rgba(247, 208, 96, 0.2);
-}
-
-.submitButton {
-  /* Reutiliza o estilo do botão CTA */
-  composes: ctaButton;
-  align-self: center; /* Centraliza o botão */
-  margin-top: 1rem;
-}
-
-/* =================================== */
-/*          Responsive Design          */
-/* =================================== */
+/* Responsividade para a seção de skills */
 @media (max-width: 768px) {
-  .header {
-    position: static; /* Remove a fixação do header em telas menores */
-  }
-
-  .container {
-    padding: 2rem 1rem; /* Simplifica o padding, já que o header não é mais fixo */
-  }
-
-  .navbar {
-    flex-direction: column; /* Empilha os links da navegação */
-    align-items: center; /* Centraliza os links empilhados */
-    gap: 1rem;
-  }
-
-  .mainContent {
-    gap: 3rem; /* Diminui o espaço entre as seções */
-  }
-
-  .scrollCard {
-    grid-template-columns: 1fr; /* Coluna única */
-    padding: 2rem;
-    gap: 2rem;
-  }
-
-  .textWrapper {
-    text-align: center; /* Centraliza o texto no card */
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .ctaButton {
-    align-self: center; /* Centraliza o botão no card */
-  }
-
   .skillsGrid {
     grid-template-columns: 1fr;
   }
-
   .skillsTitle {
     font-size: 1.8rem;
-  }
-
-  .contactSection {
-    padding: 2rem;
   }
 }

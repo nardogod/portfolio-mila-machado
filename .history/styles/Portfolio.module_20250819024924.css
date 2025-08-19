@@ -135,6 +135,18 @@
   opacity: 1;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .scrollCard {
+    grid-template-columns: 1fr; /* Coluna única */
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
 /* Keyframes para a animação do card */
 @keyframes fadeInCard {
   from {
@@ -198,6 +210,16 @@
   font-size: 1rem;
   color: #c0c0c0;
   line-height: 1.5;
+}
+
+/* Responsividade para a seção de skills */
+@media (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  .skillsTitle {
+    font-size: 1.8rem;
+  }
 }
 
 /* Seção de Contato */
@@ -268,54 +290,7 @@
   margin-top: 1rem;
 }
 
-/* =================================== */
-/*          Responsive Design          */
-/* =================================== */
 @media (max-width: 768px) {
-  .header {
-    position: static; /* Remove a fixação do header em telas menores */
-  }
-
-  .container {
-    padding: 2rem 1rem; /* Simplifica o padding, já que o header não é mais fixo */
-  }
-
-  .navbar {
-    flex-direction: column; /* Empilha os links da navegação */
-    align-items: center; /* Centraliza os links empilhados */
-    gap: 1rem;
-  }
-
-  .mainContent {
-    gap: 3rem; /* Diminui o espaço entre as seções */
-  }
-
-  .scrollCard {
-    grid-template-columns: 1fr; /* Coluna única */
-    padding: 2rem;
-    gap: 2rem;
-  }
-
-  .textWrapper {
-    text-align: center; /* Centraliza o texto no card */
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .ctaButton {
-    align-self: center; /* Centraliza o botão no card */
-  }
-
-  .skillsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .skillsTitle {
-    font-size: 1.8rem;
-  }
-
   .contactSection {
     padding: 2rem;
   }
