@@ -71,7 +71,7 @@
   gap: 3rem;
   align-items: center;
   opacity: 0;
-  animation: fadeInCard 0.8s 0.2s ease-out forwards;
+  animation: fadeInCard 1s 0.2s ease-out forwards;
 }
 
 .heroText {
@@ -181,7 +181,7 @@
   width: 100%;
   max-width: 1100px;
   text-align: center;
-  animation: fadeInCard 0.8s 0.5s ease-out forwards;
+  animation: fadeInCard 1s 0.4s ease-out forwards;
   opacity: 0;
 }
 
@@ -300,7 +300,7 @@
   width: 100%;
   max-width: 1100px;
   text-align: center;
-  animation: fadeInCard 0.8s 0.8s ease-out forwards;
+  animation: fadeInCard 1s 0.6s ease-out forwards;
   opacity: 0;
   background: #1a1a1a;
   border-radius: 10px;
@@ -352,6 +352,7 @@
 
   .heroImageWrapper {
     order: 1; /* A imagem virá antes do texto */
+    flex: none; /* Garante que o container não encolha */
     height: 350px;
     width: 100%;
     max-width: 450px; /* Evita que a imagem fique muito grande em tablets */

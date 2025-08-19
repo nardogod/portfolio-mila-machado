@@ -12,7 +12,7 @@ const heroData = {
   subtitle: "Energia e Dança que Transformam o seu Evento",
   description:
     "Especialista em levar alegria e profissionalismo para palcos e festas. Com anos de experiência em forró, presença VIP e animação, garanto um evento inesquecível.",
-  imageUrl: "/images/mila-principal.jpg", // Dica: Use a melhor foto dela aqui!
+  imageUrl: "/images/mila-principal.jpg", // Dica: Foto principal da Mila
   cta: {
     text: "Faça um Orçamento via WhatsApp",
     link: "https://wa.me/5511999999999", // Dica: Use seu link do WhatsApp aqui
@@ -177,9 +177,7 @@ const PortfolioPage: NextPage = () => {
           <h2 className={`${styles.skillsTitle} ${styles.videoTitle}`}>
             Vídeos
           </h2>
-          <p className={styles.gallerySubtitle}>
-            Sinta a energia das minhas apresentações.
-          </p>
+          <p className={styles.gallerySubtitle}>Apresentações.</p>
           <div className={styles.videoWrapper}>
             {/* Dica: Substitua o link abaixo pelo link do seu vídeo no YouTube */}
             <iframe
