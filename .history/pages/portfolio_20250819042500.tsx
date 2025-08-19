@@ -46,17 +46,15 @@ const services = [
 // e adicione um novo objeto a este array.
 const galleryImages = [
   {
-    src: "/images/evento-forro-1.jpg",
+    src: "public/images/presenca-vip-1.jpg",
     alt: "Mila dançando em show de forró",
   },
-  { src: "/images/foto03.jpg", alt: "Mila em outro show de forró" },
-  { src: "/images/foto4.jpg", alt: "Mila em evento VIP" },
+  { src: "/images/ ", alt: "Mila em evento VIP" },
   {
-    src: "/images/foto02.jpg",
+    src: "/images/animacao-festa-1.jpg",
     alt: "Mila animando festa com fantasia",
   },
-  { src: "/images/foto3.jpg", alt: "Mila em outro show de forró" },
-  { src: "/images/foto01.jpg", alt: "Mila em outro show de forró" },
+  { src: "/images/evento-forro-2.jpg", alt: "Mila em outro show de forró" },
 ];
 
 const PortfolioPage: NextPage = () => {

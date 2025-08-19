@@ -49,7 +49,6 @@ const galleryImages = [
     src: "/images/evento-forro-1.jpg",
     alt: "Mila dançando em show de forró",
   },
-  { src: "/images/foto03.jpg", alt: "Mila em outro show de forró" },
   { src: "/images/foto4.jpg", alt: "Mila em evento VIP" },
   {
     src: "/images/foto02.jpg",
@@ -57,6 +56,7 @@ const galleryImages = [
   },
   { src: "/images/foto3.jpg", alt: "Mila em outro show de forró" },
   { src: "/images/foto01.jpg", alt: "Mila em outro show de forró" },
+  { src: "/images/foto03.jpg", alt: "Mila em outro show de forró" },
 ];
 
 const PortfolioPage: NextPage = () => {

@@ -9,7 +9,7 @@
   min-height: 100vh;
   padding: 2rem;
   /* Efeito de fundo com gradiente animado */
-  background: linear-gradient(315deg, #f0e8e7, #770f85, #3a091a, #e91607);
+  background: linear-gradient(315deg, #2a0a3f, #770f85, #680526, #1a0625);
   background-size: 400% 400%;
   animation: gradientAnimation 20s ease-in-out infinite;
   color: #f0f0f0;

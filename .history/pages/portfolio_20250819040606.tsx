@@ -41,24 +41,6 @@ const services = [
   },
 ];
 
-// --- DADOS DA GALERIA ---
-// Dica: Para adicionar mais fotos, coloque os arquivos na pasta `public/images`
-// e adicione um novo objeto a este array.
-const galleryImages = [
-  {
-    src: "/images/evento-forro-1.jpg",
-    alt: "Mila dançando em show de forró",
-  },
-  { src: "/images/foto03.jpg", alt: "Mila em outro show de forró" },
-  { src: "/images/foto4.jpg", alt: "Mila em evento VIP" },
-  {
-    src: "/images/foto02.jpg",
-    alt: "Mila animando festa com fantasia",
-  },
-  { src: "/images/foto3.jpg", alt: "Mila em outro show de forró" },
-  { src: "/images/foto01.jpg", alt: "Mila em outro show de forró" },
-];
-
 const PortfolioPage: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -143,52 +125,41 @@ const PortfolioPage: NextPage = () => {
         </section>
 
         {/* Seção de Galeria (Sugestão) */}
-        <section
-          id="galeria"
-          className={`${styles.skillsSection} ${styles.gallerySection}`}
-        >
-          <h2 className={`${styles.skillsTitle} ${styles.galleryTitle}`}>
-            Galeria de Fotos
-          </h2>
+        <section id="galeria" className={styles.gallerySection}>
+          <h2 className={styles.galleryTitle}>Galeria de Fotos</h2>
           <p className={styles.gallerySubtitle}>
             Veja um pouco do meu trabalho em ação.
           </p>
+          {/* Aqui você poderia mapear um array de imagens e criar uma galeria visualmente atraente */}
           <div className={styles.galleryGrid}>
-            {/* Mapeando as imagens da galeria dinamicamente */}
-            {galleryImages.map((image, index) => (
-              <div key={index} className={styles.galleryItem}>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  layout="responsive"
-                  width={500}
-                  height={500}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Seção de Vídeos */}
-        <section
-          id="videos"
-          className={`${styles.skillsSection} ${styles.videoSection}`}
-        >
-          <h2 className={`${styles.skillsTitle} ${styles.videoTitle}`}>
-            Vídeos
-          </h2>
-          <p className={styles.gallerySubtitle}>
-            Sinta a energia das minhas apresentações.
-          </p>
-          <div className={styles.videoWrapper}>
-            {/* Dica: Substitua o link abaixo pelo link do seu vídeo no YouTube */}
-            <iframe
-              src="https://www.youtube.com/embed/VIDEO_ID_AQUI"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            {/* Exemplo de imagem na galeria */}
+            <div className={styles.galleryItem}>
+              <Image
+                src="/images/evento-forro-1.jpg"
+                alt="Mila dançando em show de forró"
+                layout="responsive"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className={styles.galleryItem}>
+              <Image
+                src="/images/presenca-vip-1.jpg"
+                alt="Mila em evento VIP"
+                layout="responsive"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className={styles.galleryItem}>
+              <Image
+                src="/images/animacao-festa-1.jpg"
+                alt="Mila animando festa com fantasia"
+                layout="responsive"
+                width={500}
+                height={500}
+              />
+            </div>
           </div>
         </section>
 
@@ -198,7 +169,7 @@ const PortfolioPage: NextPage = () => {
             href={heroData.cta.link}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.ctaButton} ${styles.submitButton}`}
+            className={styles.submitButton} // Reutilizando o estilo do botão
           >
             Chamar no WhatsApp
           </a>

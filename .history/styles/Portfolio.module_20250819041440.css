@@ -8,10 +8,7 @@
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  /* Efeito de fundo com gradiente animado */
-  background: linear-gradient(315deg, #f0e8e7, #770f85, #3a091a, #e91607);
-  background-size: 400% 400%;
-  animation: gradientAnimation 20s ease-in-out infinite;
+  background-color: #1e86b6;
   color: #f0f0f0;
 }
 
@@ -140,18 +137,6 @@
 /* =================================== */
 /*          Animações e Links          */
 /* =================================== */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes fadeInCard {
   from {
     opacity: 0;
@@ -232,11 +217,11 @@
 /*           Seção de Galeria          */
 /* =================================== */
 .gallerySection {
-  /* Esta classe pode ser usada para adicionar estilos específicos da galeria no futuro */
+  composes: skillsSection; /* Reutiliza estilos da seção de skills */
 }
 
 .galleryTitle {
-  /* Esta classe pode ser usada para adicionar estilos específicos ao título da galeria */
+  composes: skillsTitle; /* Reutiliza estilos do título */
 }
 
 .gallerySubtitle {
@@ -264,37 +249,6 @@
   transform: scale(1.03);
 }
 
-/* =================================== */
-/*            Seção de Vídeos          */
-/* =================================== */
-.videoSection {
-  /* Esta classe pode ser usada para adicionar estilos específicos da galeria no futuro */
-}
-
-.videoTitle {
-  /* Esta classe pode ser usada para adicionar estilos específicos ao título da galeria */
-}
-
-/* Wrapper para manter a proporção do vídeo responsivo */
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* Seção de Contato */
 .contactSection {
   width: 100%;
@@ -317,7 +271,8 @@
 }
 
 .submitButton {
-  /* Esta classe pode ser usada para adicionar estilos específicos ao botão de contato */
+  /* Reutiliza o estilo do botão CTA */
+  composes: ctaButton;
 }
 
 /* =================================== */
